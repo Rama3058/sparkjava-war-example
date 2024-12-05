@@ -1,15 +1,15 @@
 pipeline {
     agent any
 
-    environment {
-        MAVEN_HOME = tool name: 'Maven', type: 'maven'
-    }
+    // environment {
+    //     MAVEN_HOME = tool name: 'Maven', type: 'maven'
+    // }
 
     stages {
         stage('Clone Repository') {
             steps {
                 // Clone the GitHub repository
-                git branch: 'main', url: 'https://github.com/Rama3058/sparkjava-war-example.git'
+                git branch: 'master', url: 'https://github.com/Rama3058/sparkjava-war-example.git'
             }
         }
 
